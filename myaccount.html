@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Account</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+table {
+    text-align: center;
+    width: 100%;
+}
+td, th {
+    border: 1px solid black;
+  
+    padding: 8px;
+}
+	#logo
+	{
+		float:left;
+		padding-left: 12px;
+		
+	}
+	#navigation
+	{
+		float:left;
+		background-color:LightGray;
+		overflow: hidden;
+		padding: 20px;
+		font-size: 25px;
+		text-align: left;
+		width: 70%;
+		height:20%;
+	}
+	.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+	color:black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #111;
+	color:white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.active {
+ background-color: white;
+    
+}
+.container {
+  position: relative;
+  width: 300px;
+}
+
+.image {
+  display: block;
+  width: 300px;
+  height: 250px;
+}
+<!--
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 300px;
+  right: 0;
+  background-color: #111;
+  overflow: hidden;
+  width: 0;
+  height: 250px;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  width: 300px;
+  height:250px;
+  left: 0;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+-->
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+
+
+.container {
+    padding: 16px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 25%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.footer:hover p{
+color:white;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;    
+}
+.fa-caret-down {
+  padding: 0px;
+  font-size: 15px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 0px;
+  border-radius: 0%;    
+}
+
+.fa-facebook {
+  color: white;
+}
+.fa-facebook:hover {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+ 
+  color: white;
+}
+
+.fa-twitter:hover {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-linkedin {
+  
+  color: white;
+}
+
+.fa-linkedin:hover {
+  background: #007bb5;
+  color: white;
+}
+.fa-youtube {
+
+  color: white;
+}
+.fa-youtube:hover {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  
+  color: white;
+}
+
+.fa-instagram:hover {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  
+  color: white;
+}
+
+.fa-pinterest:hover {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+ 
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-snapchat-ghost:hover {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+<!--
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}-->
+
+</style>
+<script>
+function showInput() {
+   var x = document.forms["myForm"]["uname"].value;
+   
+	document.getElementById("p1").innerHTML = "hello "+ x;
+}
+</script>
+</head>
+<body>
+<!--
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.display = "block";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.display = "none";
+}
+</script>
+-->
+	<div id="logo"><img src="logo.jpg" alt="logo"></div>
+	<h1 style="font-size:65px;color:black;padding-left:400px;">THE LIBRARY</h1>
+	<div class="navbar">
+		<a href="homepage.html">Home</a>
+		<!--<span onclick="openNav()"><a href="file:///E:/wp/myaccount.html"class="active" style="color:black;" >My Account</a></span>-->
+		<a href="myaccount.html"class="active" style="color:black;">My Account</a>
+		<a href="search.html">Search</a>
+		<a href="booksandmore.html">Books & more</a>
+		<a href="author.html">Authors</a>
+		<div class="dropdown">
+			<button class="dropbtn">Categories
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content" style="width:36%;">
+				<div style="width=12%;float:left;">
+					<a href="#">Biographies</a>
+					<a href="#">Health & Fitness</a>
+					<a href="#">Kid’s</a>
+					<a href="#">Sci-Fi</a>
+				</div>
+				<div style="width=8%;float:left;">
+					<a href="#">Business</a>
+					<a href="#">History</a>
+					<a href="#">Cookbooks</a>
+					<a href="#">Textbooks</a>
+				</div>
+				<div style="width=12%;float:left">
+					<a href="#">Mystery & Suspense</a>
+					<a href="#">Literature & Fiction</a>
+					<a href="#">Religion & Spirituality</a>
+					
+				</div>
+			</div>
+		</div>
+		<div style="float:right;background-color:#ddd;color:#111;"><a href="login.html">LogIn</a></div>
+	</div> 
+
+<!--<section>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form name="myForm" class="modal-content animate" action="myaccount.html" method="post" >
+    
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit" onclick="showInput()">Login</button>
+      
+    </div>
+
+  </form>
+</div>
+
+<script>
+
+var modal = document.getElementById('id01');
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+-->
+<?php
+session_start();
+
+<h2 id="p1">HELLO!!</h2>
+echo $_SESSION["username"];
+$_SESSION["firstname"]=$row["firstname"];
+$_SESSION["lastname"]=$row["lastname"];
+$_SESSION["emailid"]=$row["emailid"];
+$_SESSION["id"]=$row["id"];
+$_SESSION["mobileno"]=$row["mobileno"];
+$_SESSION["noofbook"]=$row["noofbook"];
+$_SESSION["duration"]=$row["duration"];
+$_SESSION["reg_date"]=$row["reg_date"];
+Name: Kruti Shah
+<br>
+Account No: 54656
+<br>
+Mobile No: 458956369
+<br><p>
+<table>
+  <tr>
+    <th>Sr. No.</th>
+    <th>Book Title</th>
+    <th>Book No</th>
+    <th>Due Date</th>
+  </tr>
+  
+  <tr>
+    <td>1</td>
+    <td>book1</td>
+    <td>2125</td>
+    <td>2/3/2018</td>
+  </tr>
+ <tr>
+    <td>2</td>
+    <td>book2</td>
+    <td>4368</td>
+    <td>12/2/2018</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>book3</td>
+    <td>3236</td>
+    <td>4/3/2018</td>
+  </tr>
+</table>
+?>
+<aside>
+
+</aside>
+<footer>
+	<div class="footer" style="background-color:black; weidth:100%; height:50%; color:#A9A9A9;">
+<center><p style="font-size:24px">Follow Us on</p>
+<a href="https://www.facebook.com" class="fa fa-facebook"></a>
+<a href="https://twitter.com" class="fa fa-twitter"></a>
+<a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+<a href="https://www.youtube.com" class="fa fa-youtube"></a>
+<a href="https://www.instagram.com" class="fa fa-instagram"></a>
+<a href="https://in.pinterest.com" class="fa fa-pinterest"></a>
+<a href="https://www.snapchat.com" class="fa fa-snapchat-ghost"></a></center>
+<p>Contact Us</p>
+<p><i class="fa fa-phone" style="font-size:20px"></i>1234-5678-90</p>
+<p><i class="fa fa-google" style="font-size:24px"></i>TheLibrary@gmail.com</p>
+<p>@ The library</p>
+</div>
+        <!-- Footer -->
+	</footer> 
+</body>
+</html>

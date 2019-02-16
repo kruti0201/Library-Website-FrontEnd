@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>THE LIBRARY</title>
+<style>
+	#logo
+	{
+		float:left;
+		padding-left: 0px;
+		
+	}
+	#navigation
+	{
+		float:left;
+		background-color:LightGray;
+		overflow: hidden;
+		padding: 0px;
+		font-size: 25px;
+		text-align: left;
+		width: 70%;
+		height:20%;
+	}
+	.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+	color:black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #111;
+	color:white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.active {
+ background-color: white;
+    
+}
+.corner {
+    border-radius: 5px 70px;
+    background: black;
+    padding: 0.8%; 
+    
+} 
+.parallax {
+ 
+    background-color:lightgray;
+    min-height: 150px; 
+
+   
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer:hover p{
+color:white;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;    
+}
+.fa-caret-down {
+  padding: 0px;
+  font-size: 15px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 0px;
+  border-radius: 0%;    
+}
+
+.fa-facebook {
+  color: white;
+}
+.fa-facebook:hover {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+ 
+  color: white;
+}
+
+.fa-twitter:hover {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-linkedin {
+  
+  color: white;
+}
+
+.fa-linkedin:hover {
+  background: #007bb5;
+  color: white;
+}
+.fa-youtube {
+
+  color: white;
+}
+.fa-youtube:hover {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  
+  color: white;
+}
+
+.fa-instagram:hover {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  
+  color: white;
+}
+
+.fa-pinterest:hover {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+ 
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-snapchat-ghost:hover {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+</style>
+<style>
+.w3-bar:hover
+{
+	background-color:lightgray;
+}
+.w3-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.w3-bar{width:100%;overflow:hidden}.w3-center .w3-bar{display:inline-block;width:auto}
+.w3-bar .w3-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+.w3-bar .w3-dropdown-hover,.w3-bar .w3-dropdown-click{position:static;float:left}
+.w3-bar .w3-button{white-space:normal}
+</style>
+<style>
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+button {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+	color:white;
+       width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+	<div id="logo"><img src="logo.jpg" alt="logo"></div>
+	<h1 style="font-size:65px;color:black;padding-left:400px;">THE LIBRARY</h1>
+	<div class="navbar">
+		<a href="homepage.html" >Home</a>
+		<a href="myaccount.html" >My Account</a>
+		<a href="search.html">Search</a>
+		<a href="booksandmore.html">Books & more</a>
+		<a href="author.html" class="active"  style="color:black;">Authors</a>
+		<div class="dropdown">
+			<button class="dropbtn">Categories
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content" style="width:36%;">
+				<div style="width=12%;float:left;">
+					<a href="#">Biographies</a>
+					<a href="#">Health & Fitness</a>
+					<a href="#">Kid’s</a>
+					<a href="#">Sci-Fi</a>
+				</div>
+				<div style="width=8%;float:left;">
+					<a href="#">Business</a>
+					<a href="#">History</a>
+					<a href="#">Cookbooks</a>
+					<a href="#">Textbooks</a>
+				</div>
+				<div style="width=12%;float:left">
+					<a href="#">Mystery & Suspense</a>
+					<a href="#">Literature & Fiction</a>
+					<a href="#">Religion & Spirituality</a>
+					
+				</div>
+			</div>
+		</div>
+		<div style="float:right;background-color:#ddd;color:#111;"><a href="login.html">LogIn</a></div>
+	</div> 
+		
+	
+<div class="w3-container">
+  <center><h2 style="font-size:40px;">Authors</h2></center>
+ 
+  <ul class="w3-ul w3-card-4">
+    <li class="w3-bar" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+      
+      <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Rick Mofina</span><br>
+        <span>Australia</span>
+      </div>
+    </li>
+
+    <li class="w3-bar" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">
+    
+      <img src="img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Jill</span><br>
+        <span>Germany</span>
+      </div>
+    </li>
+
+    <li class="w3-bar">
+      
+      <img src="img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Jane</span><br>
+        <span>America</span>
+      </div>
+    </li>
+       <li class="w3-bar" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+      
+      <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Rick Mofina</span><br>
+        <span>Australia</span>
+      </div>
+    </li>
+
+    <li class="w3-bar" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">
+    
+      <img src="img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Jill</span><br>
+        <span>Germany</span>
+      </div>
+    </li>
+
+    <li class="w3-bar">
+      
+      <img src="img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Jane</span><br>
+        <span>America</span>
+      </div>
+    </li>
+       <li class="w3-bar" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+      
+      <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Rick Mofina</span><br>
+        <span>Australia</span>
+      </div>
+    </li>
+
+    <li class="w3-bar" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">
+    
+      <img src="img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Jill</span><br>
+        <span>Germany</span>
+      </div>
+    </li>
+
+    <li class="w3-bar">
+      
+      <img src="img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Jane</span><br>
+        <span>America</span>
+      </div>
+    </li>
+       <li class="w3-bar" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+      
+      <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Rick Mofina</span><br>
+        <span>Australia</span>
+      </div>
+    </li>
+
+    <li class="w3-bar" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">
+    
+      <img src="img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Jill</span><br>
+        <span>Germany</span>
+      </div>
+    </li>
+
+    <li class="w3-bar">
+      
+      <img src="img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Jane</span><br>
+        <span>America</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <br><b>Rick Mofina</b><p>Rick Mofina is a former journalist who has interviewed murderers on death row, flown over L.A. with the LAPD and patrolled with the Royal Canadian Mounted Police near the Arctic. He’s also reported from the Caribbean, Africa and Kuwait’s border with Iraq. His books have been published in nearly 30 countries, including an illegal translation produced in Iran.
+
+His work has been praised by James Patterson, Dean Koontz, Michael Connelly, Lee Child, Tess Gerritsen, Jeffery Deaver, Sandra Brown, James Rollins, Brad Thor, Nick Stone, David Morrell, Allison Brennan, Heather Graham, Linwood Barclay, Peter Robinson, Håkan Nesser and Kay Hooper.
+
+The Crime Writers of Canada, The International Thriller Writers and The Private Eye Writers of America have listed his titles among the best in crime fiction. As a two-time winner of Canada’s Arthur Ellis Award, a four-time Thriller Award finalist and a two-time Shamus Award finalist, the Library Journal calls him, “One of the best thriller writers in the business.”</p>
+    </div>
+
+    
+    <div class="container" style="background-color:#f1f1f1;">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+
+var modal = document.getElementById('id01');
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar5.png" alt="Avatar" class="avatar">
+      <br><b>Jill</b><p>Jill Santopolo is the author of the nationally and internationally bestselling novel The Light We Lost, which has been translated into more than 35 languages and has hit both the New York Times and USA Today bestseller lists. She is also the author of the Alec Flint Mysteries, the Sparkle Spa series, and the Follow Your Heart books. Jill holds a BA in English Literature from Columbia University, an MFA in Writing for Children from the Vermont College of Fine Arts, and a certificate in Intellectual Property Law from NYU. She is the Editorial Director of Philomel Books, an imprint of Penguin Young Readers Group, where she edits many critically-acclaimed, award-winning, and best-selling books including Girling Up by Mayim Bialik, She Persisted by Chelsea Clinton and Alexandra Boiger, A Tangle of Knots by Lisa Graff,  A Land of Permanent Goodbyes by Atia Abawi, The Castle in the Mist by Amy Ephron, Calling All Minds by Temple Grandin, and Peanut Butter & Cupcake! by Terry Border. When she’s not writing or editing, Jill is a thesis advisor at The New School in their MFA program in Writing for Children and Young Adults and has been on the faculty of the Columbia Publishing Course. She was formerly an adjunct professor at McDaniel College, where she helped develop the curriculum for their certificate program in Writing for Children. Jill has traveled all over the U.S.—and to Canada and Europe—to speak about writing and storytelling. She lives in New York City.</p>
+    </div>
+
+    
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+
+var modal = document.getElementById('id02');
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+    <footer>
+	<div class="footer" style="background-color:black; weidth:100%; height:50%; color:#A9A9A9;">
+<center><p style="font-size:24px">Follow Us on</p>
+<a href="https://www.facebook.com" class="fa fa-facebook"></a>
+<a href="https://twitter.com" class="fa fa-twitter"></a>
+<a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+<a href="https://www.youtube.com" class="fa fa-youtube"></a>
+<a href="https://www.instagram.com" class="fa fa-instagram"></a>
+<a href="https://in.pinterest.com" class="fa fa-pinterest"></a>
+<a href="https://www.snapchat.com" class="fa fa-snapchat-ghost"></a></center>
+<p>Contact Us</p>
+<p><i class="fa fa-phone" style="font-size:20px"></i>1234-5678-90</p>
+<p><i class="fa fa-google" style="font-size:24px"></i>TheLibrary@gmail.com</p>
+<p>@ The library</p>
+</div>
+        <!-- Footer -->
+	</footer> 
+</body>
+</html>

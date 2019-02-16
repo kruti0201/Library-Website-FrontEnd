@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {
+    border-style:solid;
+    width:50%;
+    margin-left:25%;
+    background-image:url("https://media.istockphoto.com/photos/christmas-lights-defocused-background-bokeh-gold-blue-picture-id613518332?k=6&m=613518332&s=612x612&w=0&h=Own5MdgJXjNhFd0YUyED1UP3mQsHeNhfML9F-DQYdYw=");
+    position:cover;
+    backgroung-width:100%;
+    background-height:100%
+    
+}
+
+.container {
+    padding: 16px;
+    background-color: white;
+
+}
+
+input{
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+input {
+    background-color: #ddd;
+    outline: none;
+}
+input[type=radio]{
+    width: 3%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+
+a {
+    color: dodgerblue;
+}
+
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+
+select {
+    padding:3px;
+    margin: 0;
+    
+   width:95%;
+ background: #ddd;
+    height:50px;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+   
+    cursor:pointer;
+}
+
+
+label {position:relative}
+label:after {
+    content:'<>';
+    font:11px "Consolas", monospace;
+    color:#ddd;
+ 
+    right:8px; top:2px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}
+label:before {
+    content:'';
+    right:6px; top:0px;
+    width:20px; height:20px;
+    background:#ddd;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}}
+</style>
+</head>
+<body>
+
+
+  <div class="container">
+    <form action="welcomeform.php" method="get">
+
+Name:<br>
+<input name="name" type="text" placeholder="Enter Name" required autofocus /><br><br>
+  
+Age :<br>
+<input name="age" type="number" placeholder="Enter Age"/><br><br>
+Email Id:<br>
+<input name="emailid" type="email" autocomplete="on"placeholder="Email ID" /><br><br>
+Mobile No:<br>
+<input name="mobileno" type="tel" maxlength="10" placeholder="Mobile Number" /><br><br>
+ 
+
+Gender:<br>
+ <input type="radio" name="gender" value="male" style="background-color:white; float:left;"> Male<br>
+ <input type="radio" name="gender" value="female" style="background-color:white; float:left;"> Female<br><br>
+  
+ 
+
+ <div class='custom-select' style="width:100%;">
+ <br>
+  Subscription:
+ <select name="duration">
+  <option value="1 month">1 month</option>
+  <option value="3 months">3 months</option>
+  <option value="6 months">6 months</option>
+  <option value="1 year">1 year</option>
+</select>
+</div>
+<br><br>
+No of books can be issue:
+<input name="nobook" type="number" placeholder="Enter a finite Number" required autofocus /><br><br>
+
+<br><br>
+Agree license
+<input type="checkbox" name="agree" value="agree" style="width:3%;"></input><br>
+<input type="submit" value="submited"></input>
+</form>
+</div>
+</body>
+</html>

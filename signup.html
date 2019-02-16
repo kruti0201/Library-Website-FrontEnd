@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>signup form</title>
+</head>
+<h2 ALIGN="CENTER">SignUp Form</h2>
+<body>
+ 
+
+<form action="signup.php" method="post" target="_self" autocomplete="on">
+<fieldset>
+<legend>Personal information:</legend>
+First name:<br>
+<input name="firstname" type="text" placeholder="First name" required autofocus /><br><br>
+
+Last name:<br>
+<input name="lastname" type="text" placeholder="Last name"/><br><br>
+
+Age :<br>
+<input name="age" type="number" placeholder="Enter Age"/><br><br>
+
+Email Id:<br>
+<input name="emailid" type="text" autocomplete="on"placeholder="Email ID" /><br><br>
+
+Mobile No:<br>
+<input name="mobileno" type="text" maxlength="10" placeholder="Mobile Number" /><br><br>
+ 
+
+  <br>
+  Subscription:
+ <select name="duration">
+  <option value=1>1 month</option>
+  <option value=3>3 months</option>
+  <option value=6">6 months</option>
+  <option value=12>1 year</option>
+</select>
+
+<br><br>
+No of books can be issue:
+<input name="nobook" type="text" placeholder="Enter a finite Number" required autofocus /><br><br>
+
+   Password:<br>
+<input type="password" name="password" required><br><br>
+Renter Password:<br>
+<input type="password" name="psw" required><br><br>
+
+<input type="submit"><br>
+
+</form>
+
+</body>
+</html>

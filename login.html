@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V5</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	
+<style>
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+}
+.txt1 {
+  font-family: Montserrat-SemiBold;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.txt2 {
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  color: #999999;
+  line-height: 1.5;
+}
+
+.bo1 {border-bottom: 1px solid #999999;}
+
+a {
+	font-family: Poppins-Regular;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+	
+}
+
+a:focus {
+	outline: none !important;
+}
+
+a:hover {
+	text-decoration: none;
+  
+  }
+.login100-form-btn {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  border-radius: 10px;
+
+  font-family: Poppins-Medium;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+
+}
+
+
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+}
+.login100-form-title {
+  width: 100%;
+  display: block;
+  font-family: Montserrat-Medium;
+  font-size: 39px;
+  color: #555555;
+  line-height: 1.2;
+  text-align: center;
+}
+input100 {
+  font-family: Poppins-Regular;
+  color: #333333;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;;
+}
+
+.wrap-login100 {
+  width: 680px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.login100-form {
+  width: 100%;
+}.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+.p-t-13 {padding-top: 13px;}
+.p-b-9 {padding-bottom: 9px;}
+.p-b-53 {padding-bottom: 53px;}
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+.input100 {
+  font-family: Poppins-Regular;
+  color: #333333;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 100%;
+ 
+  height: 60px;
+  padding: 0 20px;
+  border-color:black;
+}
+</style>
+
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" ">
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+				<form class="login100-form validate-form flex-sb flex-w" action="login.php" method="post">
+					<span class="login100-form-title p-b-53">
+						Log In
+					</span>
+					
+					<div class="p-t-31 p-b-9" ">
+						<span class="txt1">
+							Username
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" style=" border-style: solid; border-radius: 5px;    border-color: black;data-validate = "Username is required">
+						<input class="input100" type="text" name="username" >
+						
+					</div>
+					
+					<div class="p-t-13 p-b-9" style=" >
+						<span class="txt1">
+							Password
+						</span>
+
+						
+					</div>
+					<div class="wrap-input100 validate-input"style=" border-style: solid; border-radius: 5px;    border-color: black; data-validate = "Password is required">
+						<input class="input100" type="password" name="password" >
+						
+					</div>
+<br><br>
+					<div class="container-login100-form-btn m-t-17">
+						<button class="login100-form-btn">
+							Sign In
+						</button>
+					</div>
+
+					<div class=" p-t-55">
+						<span class="txt2">
+							Not a member?
+						</span>
+
+						<a href="signup.html" >
+							Sign up now
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	
+
+</body>
+</html>
